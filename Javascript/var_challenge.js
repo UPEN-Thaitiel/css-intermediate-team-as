@@ -1,42 +1,56 @@
 /*
-Given the existing code below, can you write some code so that their values are switched around?
+create a function that tells us how many days, weeks and months we have left if we live until 90 years old.
 
-    var a = "3";
-    var b = "8";
+It will take your current age as the input and console.logs a message with our time left in this format:
 
-So that the variable a holds the value "8".
+You have x days, y weeks, and z months left.
 
-And the variable b holds the value "3".
+Where x, y and z are replaced with the actual calculated numbers.
 
-When the code is run, it should output:
+For this challenge, assume there are 365 days in a year, 52 weeks in a year and 12 months in a year.
 
-a is 8
+IMPORTANT your console.log output should match the Example Output format exactly, even the positions of the commas and full stops.
 
-b is 3
+Example Input
 
-Do NOT change any of the existing code.
+e.g. If you are 56 years old:
 
-You are NOT allowed to type any numbers.
+    lifeInWeeks(56)
 
-You should NOT redeclare the variables a and b. 
+Example Output
 
+    You have 12410 days, 1768 weeks, and 408 months left.
 */
 
+function lifeInWeeks(age) {
+    /************Don't change the code above************/    
+    
+    const maxAge = 90;
+    const yearsLeft = maxAge - age;
+    const daysLeft = yearsLeft * 365;
+    const weeksLeft = yearsLeft * 52;
+    const monthsLeft = yearsLeft * 12;
+    
+    console.log(`You have ${daysLeft} days, ${weeksLeft} weeks, and ${monthsLeft} months left.`);
+    
+    /*************Don't change the code below**********/
+}
 
+lifeInWeeks(56);
+
+// Swapping values of a and b
 function test() {
     var a = "3";
     var b = "8";
     
-/***********Do not change the code above 👆*******/
-//Write your code on lines 7 - 9:
-    var temp = a; // Store the value of a in a temporary variable
-    a = b;        // Assign the value of b to a
-    b = temp;     // Assign the value of the temporary variable (original a) to b
-
+    /***********Do not change the code above 👆*******/
+    var temp = a;
+    a = b;
+    b = temp;
     
-/***********Do not change the code below 👇*******/
-
+    /***********Do not change the code below 👇*******/
     console.log("a is " + a);
     console.log("b is " + b);
 }
 
+test();
